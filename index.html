@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Atlas | WebChat</title>
+    <meta property="og:title" content="Atlas"/>
+    <meta property="og:image" content="assets/jitsilogo.png"/>
+    <meta property="og:description" content="Custom  WebRTC video conference service run by Thisas and powered by Jitsi Videobridge"/>
+    <meta description="Custom  WebRTC video conference service run by Thisas and powered by Jitsi Videobridge"/>
+    <meta itemprop="description" content="Custom  WebRTC video conference service run by Thisas and powered by Jitsi Videobridge"/>
+    <meta itemprop="image" content="assets/jitsilogo.png"/>
+    <link rel="icon" type="image/png" href="assets/favicon.ico"/>
+    <link href="css/bootstrap-dark.min.css" rel="stylesheet" type="text/css" />
+    <script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src='https://meet.jit.si/external_api.js'></script>
+    <script>
+    $(document).ready(function(){
+      var domain = "meet.jit.si";
+      var options = {
+        roomName: 'Atlas',
+        width: window.innerWidth,
+        height: window.innerHeight,
+        parentNode: document.querySelector('#meet')
+      }
+      const api = new JitsiMeetExternalAPI(domain, options);
+
+    })
+    </script>
+
+    <script defer src="/__/firebase/7.17.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <!-- <script defer src="/__/firebase/7.17.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.17.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.17.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.17.1/firebase-storage.js"></script> -->
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+
+  </head>
+  <body>
+  <div id="meet">
+
+  </div>
+
+
+  </body>
+</html>
