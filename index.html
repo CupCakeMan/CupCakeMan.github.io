@@ -14,7 +14,7 @@
     <link href="css/bootstrap-dark.min.css" rel="stylesheet" type="text/css" />
     <script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src='https://meet.jit.si/external_api.js'></script>
-    <script>
+<!--     <script>
     $(document).ready(function(){
       var domain = "meet.jit.si";
       var options = {
@@ -26,6 +26,23 @@
       const api = new JitsiMeetExternalAPI(domain, options);
 
     })
+    </script> -->
+        <script>
+        var domain = "meet.jit.si";
+        var options = {
+            roomName: "Atlas-Developement-Meeting-Room",
+            width: 700,
+            height: 500,
+            enableWelcomePage : true ,
+            parentNode: document.querySelector('#meet'),
+            configOverwrite: {disableKick: true},
+            interfaceConfigOverwrite: {
+                filmStripOnly: false,
+            },
+        };
+
+        var api = new JitsiMeetExternalAPI(domain, options);
+        api.executeCommand('displayName', 'New Nickname');
     </script>
 
     <script defer src="/__/firebase/7.17.1/firebase-app.js"></script>
